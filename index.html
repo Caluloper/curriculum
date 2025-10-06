@@ -1,39 +1,185 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>CV - Carlos López</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css">
-    </head>
+
+<head>
+    <title>CV - Carlos López</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+
     <body>
-        <header>
-            <img src="" alt="Mi foto">
+    <header>
+        <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Foto de Carlos López" style="width:120px; border-radius:50%;">
+        <div>
             <h1>Carlos Luis López Pérez</h1>
-        </header>
-        <div id="cont-contacto">
-            <h2>Contacto</h2>
-            <ul>
-                <li><Strong>E-Mail:</Strong> carlopez@espol.edu.ec</li>
-                <li><Strong>LinkedIn:</Strong> ...</li>
-            </ul>
+            <p>Desarrollador Web | Ingeniero en Computación</p>
         </div>
-        <div id="cont-resumen">
-            <h2>Resumen</h2>
-            <p>Bla bla bla</p>
+    </header>
+    <nav aria-label="Secciones principales">
+        <ul>
+            <li><a href="#cont-contacto">Contacto</a></li>
+            <li><a href="#cont-resumen">Resumen</a></li>
+            <li><a href="#cont-skills">Habilidades</a></li>
+            <li><a href="#cont-proyectos">Proyectos</a></li>
+            <li><a href="#multimedia">Multimedia</a></li>
+            <li><a href="#testimonios">Testimonios</a></li>
+            <li><a href="#contacto-formulario">Formulario</a></li>
+        </ul>
+    </nav>
+    <section id="cont-contacto">
+        <h2>Contacto</h2>
+        <ul>
+            <li><strong>E-Mail:</strong> <a href="mailto:carlopez@espol.edu.ec">carlopez@espol.edu.ec</a></li>
+            <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/carlopez" target="_blank" rel="noopener">linkedin.com/in/carlopez</a></li>
+            <li><strong>Teléfono:</strong> <a href="tel:+593999999999">+593 999 999 999</a></li>
+        </ul>
+    </section>
+    <section id="cont-resumen">
+        <h2>Resumen</h2>
+        <p>Ingeniero en Computación con experiencia en desarrollo web, especializado en crear soluciones digitales eficientes y atractivas. Apasionado por la tecnología, el aprendizaje continuo y el trabajo en equipo.</p>
+        <p>Visita mi sitio web profesional en <a href="https://www.carloslopez.dev" target="_blank" rel="noopener">www.carloslopez.dev</a> para conocer más sobre mi trabajo y proyectos.</p>
+    </section>
+    <section id="cont-skills">
+        <h2>Habilidades</h2>
+        <ol>
+            <li>Desarrollo Frontend</li>
+            <li>Desarrollo Backend</li>
+            <li>Gestión de proyectos</li>
+        </ol>
+        <ul>
+            <li>HTML5, CSS3, JavaScript (ES6+)</li>
+            <li>React, Node.js</li>
+            <li>Git y control de versiones</li>
+            <li>Trabajo colaborativo y comunicación efectiva</li>
+        </ul>
+    </section>
+    <section id="cont-proyectos">
+        <h2>Proyectos Destacados</h2>
+        <ul>
+            <li><strong>Portafolio Web Personal:</strong> Sitio web responsivo para mostrar proyectos y habilidades.</li>
+            <li><strong>Gestor de Tareas:</strong> Aplicación web para la gestión eficiente de tareas y equipos.</li>
+            <li><strong>Landing Page para Startup:</strong> Diseño y desarrollo de página de presentación para nueva empresa tecnológica.</li>
+        </ul>
+        <h3>Resumen de Tecnologías Utilizadas</h3>
+        <table style="border-collapse:collapse; width:100%;">
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">Frontend</th>
+                <th scope="col">Backend</th>
+            </tr>
+            <tr>
+                <th scope="row">Proyecto 1</th>
+                <td>HTML, CSS, JS</td>
+                <td>Node.js</td>
+            </tr>
+            <tr>
+                <th scope="row">Proyecto 2</th>
+                <td>React</td>
+                <td>Express</td>
+            </tr>
+            <tr>
+                <th scope="row">Proyecto 3</th>
+                <td>Vue.js</td>
+                <td>Python (Flask)</td>
+            </tr>
+        </table>
+    </section>
+    <section id="multimedia">
+        <h2>Multimedia</h2>
+        <div>
+            <h3>Mapa de Ubicación</h3>
+            <div id="map" style="height:300px; width:100%; margin-bottom:1em;"></div>
         </div>
-        <div id="cont-skills">
-            <h2>Mis habilidades:</h2>
-            <ul>
-                <li>HTML de chill</li>
-                <li>CSS de chill</li>
-                <li>REACT de chill</li>
-                <li>Si se REACT obio JavaScript</li>
-            </ul>
+        <div>
+            <h3>Imagen Placeholder</h3>
+            <img src="https://picsum.photos/400/200" alt="Imagen de ejemplo" style="max-width:100%; border-radius:8px;" />
         </div>
-        <div id="cont-proyectos">
-            <h2>Proyectos</h2>
-            <p>yo, wasup i dont have proyects. Go head with the next sections.</p>
+        <div>
+            <h3>Video de YouTube</h3>
+            <iframe width="400" height="225" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video de ejemplo" frameborder="0" allowfullscreen></iframe>
         </div>
+    </section>
+    <!-- ...existing code... -->
+    <!-- ...existing code... -->
+    <section id="testimonios" aria-labelledby="titulo-testimonios">
+        <h2 id="titulo-testimonios">Testimonios</h2>
+        <article class="testimonio">
+            <blockquote>
+                “Trabajar con Carlos fue una experiencia enriquecedora, siempre mostró profesionalismo y dedicación en cada proyecto.”
+            </blockquote>
+            <p><strong>María López</strong><br>
+                Gerente de Proyectos<br>
+                María lideró el equipo en el que colaboró y destaca su capacidad para resolver problemas y aportar ideas innovadoras.</p>
+        </article>
+        <article class="testimonio">
+            <blockquote>
+                “Su compromiso y habilidades técnicas superaron nuestras expectativas, logrando resultados sobresalientes.”
+            </blockquote>
+            <p><strong>Carlos Pérez</strong><br>
+                Director de Tecnología<br>
+                Carlos trabajó junto a Carlos en el desarrollo de soluciones digitales, resaltando su adaptabilidad y trabajo en equipo.</p>
+        </article>
+        <article class="testimonio">
+            <blockquote>
+                “Destaco su ética profesional y la excelente comunicación que mantuvo durante todo el proceso laboral.”
+            </blockquote>
+            <p><strong>Laura Gómez</strong><br>
+                Consultora Senior<br>
+                Laura colaboró en proyectos estratégicos y valora su responsabilidad y capacidad para cumplir objetivos.</p>
+        </article>
+    </section>
+    <section id="contacto-formulario">
+        <h2>Formulario de Contacto</h2>
+        <form action="#" method="post" style="max-width:500px;">
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div>
+                <label for="motivo">Motivo de contacto:</label>
+                <select id="motivo" name="motivo" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="consulta">Consulta</option>
+                    <option value="propuesta">Propuesta laboral</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+            <fieldset>
+                <legend>Preferencia de contacto</legend>
+                <label><input type="radio" name="preferencia" value="email" required> E-mail</label>
+                <label><input type="radio" name="preferencia" value="telefono"> Teléfono</label>
+                <label><input type="radio" name="preferencia" value="whatsapp"> WhatsApp</label>
+            </fieldset>
+            <fieldset>
+                <legend>Áreas de interés</legend>
+                <label><input type="checkbox" name="intereses" value="desarrollo"> Desarrollo Web</label>
+                <label><input type="checkbox" name="intereses" value="diseño"> Diseño UI/UX</label>
+                <label><input type="checkbox" name="intereses" value="data"> Ciencia de Datos</label>
+                <label><input type="checkbox" name="intereses" value="otros"> Otros</label>
+            </fieldset>
+            <div>
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+            </div>
+            <div>
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </section>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([-2.148, -79.964], 13);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+        L.marker([-2.148, -79.964]).addTo(map)
+            .bindPopup('Ubicación de ejemplo')
+            .openPopup();
+    </script>
     </body>
 </html>
