@@ -5,14 +5,14 @@
     <title>CV - Carlos López</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylesheets/styles.css">
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 
     <body>
     <header>
-        <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Foto de Carlos López" style="width:120px; border-radius:50%;">
+    <img id="photo" src="https://randomuser.me/api/portraits/men/1.jpg" alt="Foto de Carlos López">
         <div>
             <h1>Carlos Luis López Pérez</h1>
             <p>Desarrollador Web | Ingeniero en Computación</p>
@@ -30,7 +30,7 @@
         </ul>
     </nav>
     <section id="cont-contacto">
-        <h2>Contacto</h2>
+    <h2 class="subtitle">Contacto</h2>
         <ul>
             <li><strong>E-Mail:</strong> <a href="mailto:carlopez@espol.edu.ec">carlopez@espol.edu.ec</a></li>
             <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/carlopez" target="_blank" rel="noopener">linkedin.com/in/carlopez</a></li>
@@ -38,12 +38,12 @@
         </ul>
     </section>
     <section id="cont-resumen">
-        <h2>Resumen</h2>
+    <h2 class="subtitle">Resumen</h2>
         <p>Ingeniero en Computación con experiencia en desarrollo web, especializado en crear soluciones digitales eficientes y atractivas. Apasionado por la tecnología, el aprendizaje continuo y el trabajo en equipo.</p>
         <p>Visita mi sitio web profesional en <a href="https://www.carloslopez.dev" target="_blank" rel="noopener">www.carloslopez.dev</a> para conocer más sobre mi trabajo y proyectos.</p>
     </section>
     <section id="cont-skills">
-        <h2>Habilidades</h2>
+    <h2 class="subtitle">Habilidades</h2>
         <ol>
             <li>Desarrollo Frontend</li>
             <li>Desarrollo Backend</li>
@@ -57,7 +57,7 @@
         </ul>
     </section>
     <section id="cont-proyectos">
-        <h2>Proyectos Destacados</h2>
+    <h2 class="subtitle">Proyectos Destacados</h2>
         <ul>
             <li><strong>Portafolio Web Personal:</strong> Sitio web responsivo para mostrar proyectos y habilidades.</li>
             <li><strong>Gestor de Tareas:</strong> Aplicación web para la gestión eficiente de tareas y equipos.</li>
@@ -88,7 +88,7 @@
         </table>
     </section>
     <section id="multimedia">
-        <h2>Multimedia</h2>
+    <h2 class="subtitle">Multimedia</h2>
         <div>
             <h3>Mapa de Ubicación</h3>
             <div id="map" style="height:300px; width:100%; margin-bottom:1em;"></div>
@@ -105,7 +105,7 @@
     <!-- ...existing code... -->
     <!-- ...existing code... -->
     <section id="testimonios" aria-labelledby="titulo-testimonios">
-        <h2 id="titulo-testimonios">Testimonios</h2>
+    <h2 id="titulo-testimonios" class="subtitle">Testimonios</h2>
         <article class="testimonio">
             <blockquote>
                 “Trabajar con Carlos fue una experiencia enriquecedora, siempre mostró profesionalismo y dedicación en cada proyecto.”
@@ -132,7 +132,7 @@
         </article>
     </section>
     <section id="contacto-formulario">
-        <h2>Formulario de Contacto</h2>
+    <h2 class="subtitle">Formulario de Contacto</h2>
         <form action="#" method="post" style="max-width:500px;">
             <div>
                 <label for="nombre">Nombre:</label>
@@ -181,5 +181,8 @@
             .bindPopup('Ubicación de ejemplo')
             .openPopup();
     </script>
+    <footer>
+        <p>&copy; 2025 Carlos Luis López Pérez. Todos los derechos reservados. | Contacto: carlopez@espol.edu.ec</p>
+    </footer>
     </body>
 </html>
