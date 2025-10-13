@@ -102,51 +102,45 @@
             <iframe width="400" height="225" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video de ejemplo" frameborder="0" allowfullscreen></iframe>
         </div>
     </section>
-    <!-- ...existing code... -->
-    <!-- ...existing code... -->
     <section id="testimonios" aria-labelledby="titulo-testimonios">
     <h2 id="titulo-testimonios" class="subtitle">Testimonios</h2>
-        <article class="testimonio">
-            <blockquote>
-                “Trabajar con Carlos fue una experiencia enriquecedora, siempre mostró profesionalismo y dedicación en cada proyecto.”
-            </blockquote>
-            <p><strong>María López</strong><br>
-                Gerente de Proyectos<br>
-                María lideró el equipo en el que colaboró y destaca su capacidad para resolver problemas y aportar ideas innovadoras.</p>
-        </article>
-        <article class="testimonio">
-            <blockquote>
-                “Su compromiso y habilidades técnicas superaron nuestras expectativas, logrando resultados sobresalientes.”
-            </blockquote>
-            <p><strong>Carlos Pérez</strong><br>
-                Director de Tecnología<br>
-                Carlos trabajó junto a Carlos en el desarrollo de soluciones digitales, resaltando su adaptabilidad y trabajo en equipo.</p>
-        </article>
-        <article class="testimonio">
-            <blockquote>
-                “Destaco su ética profesional y la excelente comunicación que mantuvo durante todo el proceso laboral.”
-            </blockquote>
-            <p><strong>Laura Gómez</strong><br>
-                Consultora Senior<br>
-                Laura colaboró en proyectos estratégicos y valora su responsabilidad y capacidad para cumplir objetivos.</p>
-        </article>
+    <article class="testimonio">
+        <blockquote>
+            “Trabajar con Carlos fue una experiencia enriquecedora, siempre mostró profesionalismo y dedicación en cada proyecto.”
+        </blockquote>
+        <p><strong>María López</strong><br>
+            Gerente de Proyectos<br>
+            María lideró el equipo en el que colaboró y destaca su capacidad para resolver problemas y aportar ideas innovadoras.</p>
+    </article>
+    <article class="testimonio">
+        <blockquote>
+            “Su compromiso y habilidades técnicas superaron nuestras expectativas, logrando resultados sobresalientes.”
+        </blockquote>
+        <p><strong>Carlos Pérez</strong><br>
+            Director de Tecnología<br>
+            Carlos trabajó junto a Carlos en el desarrollo de soluciones digitales, resaltando su adaptabilidad y trabajo en equipo.</p>
+    </article>
+    <article class="testimonio">
+        <blockquote>
+            “Destaco su ética profesional y la excelente comunicación que mantuvo durante todo el proceso laboral.”
+        </blockquote>
+        <p><strong>Laura Gómez</strong><br>
+            Consultora Senior<br>
+            Laura colaboró en proyectos estratégicos y valora su responsabilidad y capacidad para cumplir objetivos.</p>
+    </article>
     </section>
     <section id="contacto-formulario">
     <h2 class="subtitle">Formulario de Contacto</h2>
-        <form action="#" method="post" style="max-width:500px;">
-            <div>
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-            </div>
-            <div>
-                <label for="motivo">Motivo de contacto:</label>
-                <select id="motivo" name="motivo" required>
-                    <option value="">Seleccione una opción</option>
-                    <option value="consulta">Consulta</option>
-                    <option value="propuesta">Propuesta laboral</option>
-                    <option value="otro">Otro</option>
-                </select>
-            </div>
+    <form action="#" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="motivo">Motivo de contacto:</label>
+            <select id="motivo" name="motivo" required>
+                <option value="">Seleccione una opción</option>
+                <option value="consulta">Consulta</option>
+                <option value="propuesta">Propuesta laboral</option>
+                <option value="otro">Otro</option>
+            </select>
             <fieldset>
                 <legend>Preferencia de contacto</legend>
                 <label><input type="radio" name="preferencia" value="email" required> E-mail</label>
@@ -160,13 +154,9 @@
                 <label><input type="checkbox" name="intereses" value="data"> Ciencia de Datos</label>
                 <label><input type="checkbox" name="intereses" value="otros"> Otros</label>
             </fieldset>
-            <div>
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-            </div>
-            <div>
-                <button type="submit">Enviar</button>
-            </div>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+            <button type="submit">Enviar</button>
         </form>
     </section>
     <!-- Leaflet JS -->
