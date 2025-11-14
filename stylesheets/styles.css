@@ -1,60 +1,267 @@
+:root {
+    --primary: #107b77;
+    --primary-dark: #0b615d;
+    --accent: #e6fbfb;
+    --muted: #6b7280;
+    --bg: #f7ffff;
+    --section-bg: #ffffff;
+    --card-bg: #f8ffff;
+    --radius: 0.5rem;
+    --gap: 1rem;
+}
+
 * {
+    box-sizing: border-box;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-header h1 {
-    text-align: center;
-    font-weight: bold;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+body {
+    margin: 0;
+    background: linear-gradient(180deg, var(--bg), #f1fbfb);
+    color: #072022;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 1rem;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    background: linear-gradient(180deg, #e8fbfb, #f6fffe);
+    border: 1px solid #d7f0ef;
+    border-radius: 0.625rem;
 }
 
 #photo {
-    width: 8vw;
-    height: auto;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 0.25rem solid #ffffff;
+    box-shadow: 0 0.25rem 0.5rem rgba(16, 123, 119, 0.12);
 }
 
-.subtitle {
-    color: rgb(151 156 165 / 0.89);
-    text-transform: uppercase;
+header > div {
+    display: flex;
+    flex-direction: column;
 }
 
-footer p {
-    text-align: right;
-    font-style: italic;
+header h1 {
+    margin: 0;
+    font-weight: 700;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.125rem;
+}
+
+header p {
+    margin: 0.25rem 0 0 0;
+    color: var(--primary-dark);
+    font-weight: 500;
+}
+
+nav {
+    margin-top: 0.75rem;
 }
 
 nav > ul {
     list-style: none;
     padding-left: 0;
     display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem;
+    justify-content: center;
+    gap: calc(var(--gap) / 1.25);
+    margin: 0.5rem 0 0 0;
+}
+
+nav a {
+    color: var(--primary-dark);
+    text-decoration: none;
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.375rem;
+    font-weight: 600;
+}
+
+nav a:hover,
+nav a:focus {
+    background: var(--accent);
+    color: #043d3b;
 }
 
 section {
-    border: 0.2pt solid #cedddd;
-    margin: 4px 2px 8px 2px;
-    padding: 1.5% 0.8%;
-    margin-bottom: 1.2rem;
+    border: 0.0625rem solid #dbeeee;
+    margin: 0.25rem 0 0.5rem 0;
+    padding: 0.9rem 1rem;
+    background: var(--section-bg);
+    border-radius: calc(var(--radius) - 0.1rem);
+}
+
+.subtitle {
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.85rem;
+    margin: 0 0 0.5rem 0;
 }
 
 section > form {
     display: grid;
-    grid-template-columns: 1fr;
-    row-gap: 1rem;
+    grid-template-columns: 8rem 1fr;
     column-gap: 1rem;
+    row-gap: 0.75rem;
+    align-items: start;
+}
+
+label {
+    display: block;
+    margin: 0;
+    padding-top: 0.35rem;
+    color: #0f1720;
+    font-weight: 600;
+    text-align: right;
+    padding-right: 0.5rem;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border: 0.0625rem solid #dfecec;
+    border-radius: 0.375rem;
+    background: var(--card-bg);
+    color: #062226;
+}
+
+section > form label {
+    grid-column: 1;
+}
+
+section > form input,
+section > form select,
+section > form textarea {
+    grid-column: 2;
+}
+
+section > form fieldset,
+section > form button {
+    grid-column: 1 / -1;
+}
+
+fieldset {
+    border: 0.0625rem solid #dfecec;
+    padding: 0.75rem;
+    border-radius: 0.375rem;
+    background: #ffffff;
+}
+
+legend {
+    font-weight: 700;
+    color: #0f1720;
+    font-size: 0.95rem;
+    padding: 0 0.5rem;
+}
+
+fieldset label {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-align: left;
+    font-weight: 500;
+    padding-top: 0;
+    padding-right: 0;
+}
+
+fieldset label input {
+    width: auto;
+    margin-right: 0.5rem;
+    accent-color: var(--primary);
+}
+
+button {
+    padding: 0.55rem 1rem;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    justify-self: end;
+    font-weight: 700;
+}
+
+button:hover,
+button:focus {
+    background: var(--primary-dark);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    padding: 0.6rem;
+    border: 0.0625rem solid #e6f4f4;
+    text-align: left;
+}
+
+th {
+    background: var(--primary);
+    color: #ffffff;
+    font-weight: 700;
 }
 
 section#testimonios {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: auto auto;
     gap: 1rem;
 }
 
 section#testimonios .subtitle {
     grid-column: 1 / -1;
+}
+
+.testimonio {
+    background: linear-gradient(135deg, #ffffff, #f9ffff);
+    border-left: 0.375rem solid var(--primary);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.375rem rgba(16, 123, 119, 0.08);
+}
+
+blockquote {
+    margin: 0 0 0.75rem 0;
+    padding: 0;
+    font-style: italic;
+    color: var(--primary-dark);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.testimonio > p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #0f1720;
+}
+
+#map {
+    height: 18.75rem;
     width: 100%;
+    border-radius: 0.375rem;
+    background: #eaf6f6;
+}
+
+iframe {
+    max-width: 100%;
+    border-radius: 0.375rem;
+    border: none;
+}
+
+footer p {
+    text-align: right;
+    font-style: italic;
+    margin: 0.5rem 0 0 0;
+    color: var(--muted);
 }
